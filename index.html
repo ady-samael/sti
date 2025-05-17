@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>STI Malolos</title>
+
+  <link rel="icon" type="image/png" href="images/STI_logo.png" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+
+  <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+  
+</head>
+<body>
+  <div class="hero">
+    <img src="images/image_bg.png" alt="Background image">
+  </div>
+
+  <nav>
+    <div class="nav-inner">
+      <div class="logo-container">
+        <img src="images/STI_logo.png" />
+        <span>STI COLLEGE MALOLOS</span>
+      </div>
+      <div class="nav-links">
+        <a href="#" class="active">Home</a>
+
+        <!-- Dropdown for Categories -->
+        <div class="dropdown">
+          <a href="#" class="dropbtn">Categories</a>
+          <div class="dropdown-content">
+            <a href="#" id="collegeProgramsBtn">College Programs</a>
+            <a href="#" id="shsProgramsBtn">Senior High School</a>
+          </div>          
+        </div>
+    
+        <a href="#" id="virtualTourBtn">Virtual Tour</a>
+      </div>  
+      
+      <div class="dropdown" id="contactDropdown">
+        <a href="#" class="contact-link dropbtn">Contact Us</a>
+        <div class="dropdown-content">
+          <span>Location: McArthur Highway, Dakila, Malolos, Philippines</span>
+          <span>Contact Number: (044) 791 3451</span>
+        </div>
+      </div>
+    </div>
+  </nav>  
+
+  <!-- Map Panel (initially hidden) -->
+  <div id="mapPanel" class="map-panel">
+    <div class="map-panel-arrow"></div>
+      <div class="map-panel-content">
+        <h3 id="mapPanelTitle">Title</h3>
+        <img id="mapPanelImage" src="" alt="Map layout" />
+      </div>
+    </div>
+
+  <div id="programsContainer" class="programs-container">
+    <h2 id="programTitle">Program Title</h2>
+    <div id="programContent" class="program-content">
+    </div>
+  </div>  
+
+  <!-- Virtual Tour Panel -->
+  <div id="virtualTourPanel" class="virtual-tour-panel">
+    <div class="virtual-tour-content">
+      <button id="closeVT" class="vt-close-btn">&times;</button>
+
+      <!-- Location & Scene Pickers -->
+      <div class="vt-pickers">
+        <label for="locationSelect">Location:</label>
+        <select id="locationSelect">
+          <option value="basement">Basement</option>
+          <option value="lobby">Lobby</option>
+          <option value="floor2">Floor 2</option>
+          <option value="floor3">Floor 3</option>
+          <option value="floor4">Floor 4</option>
+          <option value="gym">Gym</option>
+
+        </select>
+
+        <label for="sceneSelect">View:</label>
+        <select id="sceneSelect"></select>
+      </div>
+
+      <div id="streetViewPanorama" style="width:100%; height:100%"></div>
+    </div>
+  </div>
+
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-content">
+      <h2 class="sidebar-title">FLOOR</h2>
+      <div class="sidebar-buttons">
+        <button class="sidebar-btn">BASEMENT</button>
+        <button class="sidebar-btn">FLR 1</button>
+        <button class="sidebar-btn">FLR 2</button>
+        <button class="sidebar-btn">FLR 3</button>
+        <button class="sidebar-btn">FLR 4</button>
+        <button class="sidebar-btn">FLR 5</button>
+      </div>
+    </div>
+  </div>
+
+  <button class="floating-btn" id="toggleSidebarBtn">
+    <img src="images/button1.png" alt="Arrow" />
+  </button>
+
+  <div class="spacer"></div>
+
+  <div class="bottom-curve"></div>
+
+  <script src="/script/app.js"></script>
+  <script src="/script/sidebar-funtion.js"></script>
+  <script src="/script/virtualTour-function.js"></script>
+</body>
+</html>
